@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap");
+
+/* Basic style */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  padding: 0p;
+  margin: 0;
+  line-height: 1.5;
+  background-color: hsl(0, 18%, 97%);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  /* The workflow property determines what to do it content overflows an element box. Setting overflow to hidden will hide/clip the overflowing content */
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+.btn-1 {
+  height: 38px;
+  background-color: #eb4422;
+  padding-left: 20px;
+  padding-right: #fff;
+  /* padding o.20 0.20 */
+}
+
+.light,
+.dark {
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.light {
+  background-color: #e6e6e6;
+  color: #2d2d2d;
+}
+
+.dark {
+  background-color: #2d2d2d;
+  color: #e6e6e6;
+}
+/* header */
+header {
+  background-color: #2d2b3e;
+  color: #e6e6e6;
+  min-height: 70px;
+  /* Setting min height so height for the header section can expand if needed */
+  border-bottom: 3px solid#eb4422;
+  padding: 5px 0;
+  /* Margin Border Padding Content MBPC   **outside in**/
+}
+
+header > .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+header ul {
+  height: 100px;
+  align-items: center;
+  display: flex;
+}
+
+header li {
+  list-style: none;
+  padding: 0 10px;
+}
+
+header a {
+  color: #e6e6e6;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+/* highlight * inside of a tag children of current id */
+#highlight,
+#current a {
+  color: #eb4422;
+  font-weight: bold;
+}
+/* specificity battle */
+#current a:hover,
+a:hover {
+  color: #ccc;
+  font-weight: bold;
+}
+
+#showcase {
+  min-height: 400px;
+  background-image: url("Image/laptop.png");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+#showcase h1 {
+  margin-top: 100px;
+  margin-bottom: 10px;
+  font-size: 55px;
+}
+
+#showcase p {
+  font-size: 20px;
+}
+
+#newsletter {
+  background-color: #2d2d2d;
+  padding: 15px;
+  color: #e6e6e6;
+}
+
+#newsletter > .container {
+  display: flex;
+  align-items: center;
+  justify-content: horizontal;
+}
+
+#newsletter input {
+  padding: 4px;
+  height: 25px;
+  width: 250px;
+}
+
+#boxes {
+  margin-top: 20px;
+}
+/* > indicates direct child */
+#boxes > .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 30%;
+  text-align: center;
+  padding: 10px;
+}
+i {
+  font-size: 225px;
+}
+.fa-html5 {
+  color: #e45632;
+}
+.fa-css3-alt {
+  color: #2d50dc;
+}
+.fa-js {
+  color: #f3df50;
+}
+/* About */
+
+#about {
+  background-color: #2d2b3e;
+  padding: 20px;
+}
+
+#about > .container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 50px;
+}
+
+#about .main-col {
+  color: #fff;
+}
+
+#about.sidebar {
+  margin-top: 10px;
+}
+
+/* Services */
+
+#services > .container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 50px;
+}
+
+#services li {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 5px;
+  background-color: #e6e6e6;
+}
+#services .sidebar {
+  margin-top: 10px;
+}
+
+#services input,
+#services textarea {
+  padding: 5px;
+  width: 90%;
+}
+footer {
+  background-color: #2d2b3e;
+  color: #e6e6e6;
+  padding: 20px;
+  text-align: center;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+  header > .container,
+  #newsletter.container,
+  #boxes.container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  #showcase.container {
+    padding-bottom: 30px;
+  }
+  .box {
+    width: 80%;
+  }
+  #about > .container #services > .container {
+    grid-template-columns: 1fr;
+  }
+}
